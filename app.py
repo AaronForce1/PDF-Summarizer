@@ -11,11 +11,13 @@ from langchain.chat_models import ChatOpenAI
 from langchain.callbacks import get_openai_callback
 
 def load_openai_api_key():
-    dotenv_path = "openai.env"
-    load_dotenv(dotenv_path)
+    load_dotenv(os.environ.get("ENV_FILE"))
+
     openai_api_key = os.getenv("OPENAI_API_KEY")
+
     if not openai_api_key:
-        raise ValueError(f"Unable to retrieve OPENAI_API_KEY from {dotenv_path}")
+        raise ValueError(f"Unable to retrieve OPENAI_API_KEY")
+    
     return openai_api_key
 
 def process_text(text):
@@ -35,8 +37,8 @@ def process_text(text):
     return knowledgeBase
 
 def main():
-    st.title("📄PDF Summarizer")
-    st.write("Created by Hilman Singgih Wicaksana")
+    st.title("📄Booking Keeping PDF")
+    st.write("Created by")
     st.divider()
 
     try:

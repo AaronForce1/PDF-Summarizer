@@ -1,0 +1,13 @@
+services:
+  pdf-summarizer:
+    build: .
+    volumes:
+    - ./:/app
+    ports:
+    - 8501:8501
+    env_file:
+    - .env
+    command:
+    - streamlit
+    - run
+    - app.py

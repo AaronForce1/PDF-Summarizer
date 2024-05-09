@@ -1,0 +1,7 @@
+failure-threshold: warning
+override:
+  info:
+    - DL4006
+
+trustedRegistries:
+  - docker.io

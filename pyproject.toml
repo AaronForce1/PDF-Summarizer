@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "pdf_summarizer"
+version = "0.0.1"
+description = ""
+authors = [
+  "hilmansw <singgih.hilman@gmail.com>",
+  "aaronforce1 <avbaideme@proton.me>"
+]
+readme = "README.md"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
